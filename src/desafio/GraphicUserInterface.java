@@ -29,7 +29,7 @@ public class GraphicUserInterface extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        matriculaTxtField = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
 
@@ -41,9 +41,9 @@ public class GraphicUserInterface extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel2.setText("Matrícula :");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        matriculaTxtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                matriculaTxtFieldActionPerformed(evt);
             }
         });
 
@@ -64,7 +64,7 @@ public class GraphicUserInterface extends javax.swing.JFrame {
                 .addContainerGap(115, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(99, 99, 99)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(matriculaTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(108, 108, 108))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -87,7 +87,7 @@ public class GraphicUserInterface extends javax.swing.JFrame {
                 .addGap(61, 61, 61)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(matriculaTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(59, 59, 59)
                 .addComponent(jButton1)
                 .addContainerGap(88, Short.MAX_VALUE))
@@ -96,15 +96,17 @@ public class GraphicUserInterface extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void matriculaTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matriculaTxtFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_matriculaTxtFieldActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (jTextField1.getText().isEmpty()){
+        
+        if (matriculaTxtField.getText().isEmpty()){
             JOptionPaneErrorReporter.reportarMatriculaVazia();
         } else {
-        AlunosManager.getInstance().criarNovoUffMail(jTextField1.getText());
+        AlunosManager.getInstance().criarNovoUffMail(matriculaTxtField.getText());
+        matriculaTxtField.setText("");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -153,6 +155,6 @@ public class GraphicUserInterface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField matriculaTxtField;
     // End of variables declaration//GEN-END:variables
 }

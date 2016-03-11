@@ -23,6 +23,12 @@ public class JOptionPaneUserInterface {
 
         do {
             path = JOptionPane.showInputDialog("Entre com o caminho para o arquivo CSV (C:/User...)");
+            
+            // Caso o usuário aperte CANCELAR, o path será null e o sistema encerra
+            if (path == null ) {
+                System.exit(0);
+            }
+
             if (path != null && path.endsWith(extensaoCorreta)) {
                 file = new File(path);
                 if (file.exists() && !file.isDirectory()) {
@@ -38,7 +44,5 @@ public class JOptionPaneUserInterface {
 
         return path;
     }
-    
-    
 
 }

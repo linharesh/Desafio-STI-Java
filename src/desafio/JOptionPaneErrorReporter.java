@@ -22,5 +22,9 @@ public class JOptionPaneErrorReporter {
     static void reportarAlunoComStatusInativo(String pMatricula) {
         JOptionPane.showMessageDialog(null, "O Aluno de matrícula "+ pMatricula+" não está ativo", "Error", JOptionPane.ERROR_MESSAGE);
     }
+
+    static void reportarAlunoComEmailExistente(String pMatricula) {
+        JOptionPane.showMessageDialog(null, "O Aluno de matrícula "+ pMatricula+" já possui um UFFMAIL", "Error", JOptionPane.ERROR_MESSAGE);
+    }
     
 }

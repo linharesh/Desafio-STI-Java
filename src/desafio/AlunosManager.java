@@ -13,7 +13,6 @@ import java.util.ArrayList;
  */
 public class AlunosManager {
 
-    private String sufixoUffMail = "@id.uff.br";
 
     private static AlunosManager sharedInstance;
 
@@ -49,15 +48,17 @@ public class AlunosManager {
 
     public void criarNovoUffMail(String pMatricula) {
         if (alunoPodeCriarUffMail(pMatricula)){
-        
+            EmailCreator emailCreator = new EmailCreator();
+            emailCreator.criarEmail(buscaAlunoPorMatricula(pMatricula));
         }
     }
+    
 
     private boolean alunoPodeCriarUffMail(String pMatricula) {
         Aluno aluno = buscaAlunoPorMatricula(pMatricula);
         if (aluno != null) {
             if (aluno.getStatusAtivo()) {
-                if (!aluno.getUffmail().contains(this.sufixoUffMail)) {
+                if (!aluno.getUffmail().contains(EmailCreator.sufixoUffMail)) {
                     return true;
                 } else {
                     JOptionPaneErrorReporter.reportarAlunoComEmailExistente(pMatricula);
@@ -79,5 +80,7 @@ public class AlunosManager {
         }
         return null;
     }
+    
+    
 
 }

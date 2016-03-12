@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-/**
+/** Classe utilizada para LER e realizar o PARSE de um arquivo CSV
  *
  * @author linhares
  */
@@ -16,11 +16,15 @@ public class CSVReader {
     
     private final String CVS_SPLIT_BY = ",";
     
-
+    /** Método utilizado para ler um arquivo CSV com alunos.
+     *  Realiza a leitura do arquivo e armazena os alunos em um ArrayList
+     * 
+     * @param filePath Caminho para o arquivo que será lido (ex: C:/User/Linhares/alunos.csv)
+     * @return ArrayList contendo os alunos
+     */
     public ArrayList<Aluno> readCVS(String filePath) {
         
         ArrayList<Aluno> alunos = new ArrayList<Aluno>();
-        
         
         try {
             bufferedReader = new BufferedReader(new FileReader(filePath));
@@ -42,6 +46,7 @@ public class CSVReader {
                 alunos.add(aluno);
             }
 
+            
         } catch (FileNotFoundException e) {
         } catch (IOException e) {
         } finally {

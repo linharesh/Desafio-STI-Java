@@ -1,13 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package desafio;
 
-/**
+/** Classe utilizada para representar um Aluno
  *
- * @author linha
+ * @author Linhares
  */
 public class Aluno {
     
@@ -73,6 +69,25 @@ public class Aluno {
 
     public void setStatusAtivo(boolean statusAtivo) {
         this.statusAtivo = statusAtivo;
+    }
+
+    /** Retorna uma string com a representação de uma instância de aluno, de acordo com o formato CSV
+     *  Segue o seguinte padrão : nome,matricula,telefone,email,uffmail,status
+     * 
+     * Exemplo : Luiza Alves Cardoso,100142,99999-9968,email@gmail.com,,Ativo
+     * 
+     * @return Retorna uma string com a representação de uma instância de aluno, de acordo com o formato CSV
+     */
+    public String csvRepresentation() {
+        
+        String status;
+        if (this.statusAtivo){
+            status = "Ativo";
+        } else {
+            status = "Inativo";
+        }
+        
+        return this.nome + "," + this.matricula + "," + this.telefone + "," + this.email + "," + this.uffmail + "," + status;
     }
     
     

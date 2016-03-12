@@ -1,11 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package desafio;
 import javax.swing.JOptionPane;
-/**
+/** Classe utilizada para reportar erros em JOptionPane
  *
  * @author HenriqueLinhares
  */
@@ -25,6 +21,10 @@ public class JOptionPaneErrorReporter {
 
     static void reportarAlunoComEmailExistente(String pMatricula) {
         JOptionPane.showMessageDialog(null, "O Aluno de matrícula "+ pMatricula+" já possui um UFFMAIL", "Error", JOptionPane.ERROR_MESSAGE);
+    }
+    
+      static void reportarCriacaoDeEmailCancelada(String pMatricula) {
+        JOptionPane.showMessageDialog(null, "Cancelado \n Não foi criado um email para o aluno de matrícula "+ pMatricula, "Warning", JOptionPane.WARNING_MESSAGE);
     }
     
 }

@@ -3,11 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/linha/Documents/NetBeansProjects/Desafio/src/desafio/CSVReader.java</file>
-            <file>file:/C:/Users/linha/Documents/NetBeansProjects/Desafio/src/desafio/Aluno.java</file>
-            <file>file:/C:/Users/linha/Documents/NetBeansProjects/Desafio/src/desafio/Launcher.java</file>
-            <file>file:/C:/Users/linha/Documents/NetBeansProjects/Desafio/src/desafio/UserInterface.java</file>
-            <file>file:/C:/Users/linha/Documents/NetBeansProjects/Desafio/src/desafio/AlunosManager.java</file>
+            <file>file:/Users/HenriqueLinhares/Desktop/STI/src/desafio/JOptionPaneUserInterface.java</file>
+            <file>file:/Users/HenriqueLinhares/Desktop/STI/src/desafio/GraphicUserInterface.java</file>
+            <file>file:/Users/HenriqueLinhares/Desktop/STI/src/desafio/JOptionPaneErrorReporter.java</file>
+            <file>file:/Users/HenriqueLinhares/Desktop/STI/src/desafio/CSVReader.java</file>
+            <file>file:/Users/HenriqueLinhares/Desktop/STI/src/desafio/EmailCreator.java</file>
+            <file>file:/Users/HenriqueLinhares/Desktop/STI/src/desafio/Aluno.java</file>
+            <file>file:/Users/HenriqueLinhares/Desktop/STI/src/desafio/AlunosManager.java</file>
         </group>
     </open-files>
 </project-private>
